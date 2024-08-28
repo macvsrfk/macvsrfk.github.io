@@ -20,7 +20,8 @@ const MacQuotes = [
     { person: "Mac", quote: "That's right. You don't know what's going on in Israel. Maybe you shouldn't be speaking on the subject.", id: 19 },
     { person: "Mac", quote: "Can you put Jews in the 'yes' column? I feel like we gotta get it out in the open.", id: 20 },
     { person: "Mac", quote: "And you know what happens with Tokyo drifting? It leads to bickering, which of course leads to karate.", id: 21 },
-    { person: "Mac", quote: "I did not assault you. Please tell Alan that I did not assault you.", id: 22 }
+    { person: "Mac", quote: "I did not assault you. Please tell Alan that I did not assault you.", id: 22 },
+    { person: "Mac", quote: "If you just pretend to like the worm, then he'll probably just get rid of it.", id: 36}
     ];
 
 const RfkQuotes = [

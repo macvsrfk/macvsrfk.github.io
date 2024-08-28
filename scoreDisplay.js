@@ -1,7 +1,7 @@
 function makeScoreDisplayEl(correct, incorrect) {
 	const totalCount = correct.length + incorrect.length;
 	const score = Math.round((correct.length * 100) / totalCount);
-	const stars = Math.round(correct.length / totalCount * 5);
+	const stars = Math.floor(correct.length / totalCount * 5);
 
 	const scoreEl = document.createElement('h1');
 

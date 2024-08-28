@@ -1,7 +1,7 @@
 
 const CorrectResposnes = [];
 const IncorrectResponses = [];
-const Total = 10;
+const Total = 4;
 let pickCount = 0;
 
 class Quote {
@@ -44,6 +44,7 @@ function selectQuizQuotes(total) {
 
     const numRfkQuotes = Math.floor(Math.random() * total);
     const numMacQuotes = total - numRfkQuotes; 
+    console.log({numRfkQuotes, numMacQuotes});
 
     const choices = [];
 
@@ -77,21 +78,24 @@ function displayRandomQuotes() {
     });
 }
 
-function displayScore() {
+function displayScore(correct, incorrect) {
     const carouselEl = document.getElementById('default-carousel');
     carouselEl.classList.add('hidden');
 
-    
+    const containerEl = document.getElementById('container');
+    containerEl.appendChild(makeScoreDisplayEl(correct, incorrect));
 }
 
 function pick(id, opt) {
     document.getElementById('carousel-next').click();
 
     ++pickCount;
-
-     const quote = AllQuotes.find(quote => quote.id === opt);
+     const quote = AllQuotes.find(quote => quote.id === id);
      if (quote === undefined) { return; }
-     const chosenPerson = (id === 1) ? 'Mac' : 'RFK';
+
+     const chosenPerson = (opt === 1) ? 'Mac' : 'RFK';
+     console.log(chosenPerson, quote);
+
      if (chosenPerson === quote.person) {
         CorrectResposnes.push(quote);
      } else {
@@ -99,7 +103,7 @@ function pick(id, opt) {
      }
 
      if (pickCount === Total) {
-        displayScore();
+        displayScore(CorrectResposnes, IncorrectResponses);
      }
 }
 

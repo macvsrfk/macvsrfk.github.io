@@ -4,8 +4,6 @@ function makeScoreDisplayEl(correct, incorrect) {
 	const stars = Math.round(correct.length / totalCount * 5);
 
 	const scoreEl = document.createElement('h1');
-	// scoreEl.classList.add('text-8xl');
-	// scoreEl.innerHTML = `Score: ${correct.length}/${totalCount} (${score}%)`;
 
 	scoreEl.innerHTML = `
 	<div class="container mx-auto text-center m-10">

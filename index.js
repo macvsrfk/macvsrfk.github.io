@@ -1,7 +1,7 @@
 
 const CorrectResposnes = [];
 const IncorrectResponses = [];
-const Total = 4;
+const Total = 10;
 let pickCount = 0;
 
 class Quote {

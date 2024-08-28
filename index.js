@@ -2,6 +2,7 @@
 const CorrectResposnes = [];
 const IncorrectResponses = [];
 const Total = 10;
+let pickCount = 0;
 
 class Quote {
     constructor({ person, quote, id }) {
@@ -77,10 +78,17 @@ function displayRandomQuotes() {
 }
 
 function displayScore() {
+    const carouselEl = document.getElementById('default-carousel');
+    carouselEl.classList.add('hidden');
 
+    
 }
 
 function pick(id, opt) {
+    document.getElementById('carousel-next').click();
+
+    ++pickCount;
+
      const quote = AllQuotes.find(quote => quote.id === opt);
      if (quote === undefined) { return; }
      const chosenPerson = (id === 1) ? 'Mac' : 'RFK';
@@ -88,6 +96,10 @@ function pick(id, opt) {
         CorrectResposnes.push(quote);
      } else {
         IncorrectResponses.push(quote);
+     }
+
+     if (pickCount === Total) {
+        displayScore();
      }
 }
 

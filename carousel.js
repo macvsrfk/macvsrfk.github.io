@@ -5,7 +5,7 @@ function makeQuoteDisplayEl(idx, quote) {
 
     el.innerHTML = `
     <div class="container mx-auto m-10">
-        <div class="container mx-auto w-full md:w-1/2 text-center text-sm font-normal">
+        <div class="container mx-auto w-full md:w-1/2 p-10 md:p-0 text-center text-sm font-normal">
             <img class="h-60 mx-auto m-3 rounded-lg" src="${idx}.jpg" />
             <span class="mb-1 text-sm font-semibold text-gray-900 dark:text-black">${idx}/10</span>
             <div class="mb-2 text-sm font-normal my-2">"${quote.quote}"</div>
